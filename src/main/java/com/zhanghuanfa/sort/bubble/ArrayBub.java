@@ -3,6 +3,7 @@ package com.zhanghuanfa.sort.bubble;
 import com.zhanghuanfa.sort.base.ArrayBase;
 
 /**
+ * 冒泡排序
  * @author zhanghuanfa  2018-06-04 16:35
  */
 class ArrayBub extends ArrayBase {

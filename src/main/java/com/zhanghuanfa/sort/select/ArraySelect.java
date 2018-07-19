@@ -3,6 +3,7 @@ package com.zhanghuanfa.sort.select;
 import com.zhanghuanfa.sort.base.ArrayBase;
 
 /**
+ * 选择排序
  * @author zhanghuanfa  2018-06-04 17:04
  */
 class ArraySelect extends ArrayBase {

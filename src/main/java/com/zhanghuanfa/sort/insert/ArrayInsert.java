@@ -3,6 +3,7 @@ package com.zhanghuanfa.sort.insert;
 import com.zhanghuanfa.sort.base.ArrayBase;
 
 /**
+ * 插入排序
  * @author zhanghuanfa  2018-06-05 9:04
  */
 class ArrayInsert extends ArrayBase {
@@ -19,8 +20,8 @@ class ArrayInsert extends ArrayBase {
             temp = this.a[out];
             in = out;
             while (in > 0 && temp < this.a[in-1]){
-                    this.a[in] = this.a[in-1];
-                    in--;
+                this.a[in] = this.a[in-1];
+                in--;
             }
             this.a[in] = temp;
         }

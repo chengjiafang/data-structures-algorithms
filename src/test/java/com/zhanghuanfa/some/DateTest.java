@@ -1,5 +1,7 @@
 package com.zhanghuanfa.some;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.google.common.collect.Lists;
 import org.apache.commons.lang.time.DateUtils;
 import org.junit.Test;
@@ -37,5 +39,23 @@ public class DateTest {
 //        b.removeAll(tmp);
 //        System.out.println(tmp);
 //        System.out.println(b);
+    }
+
+    @Test
+    public void test01() {
+        String jsonStr = "[{\"beginHour\":7,\"beginMinute\":0,\"code\":1,\"endHour\":8,\"endMinute\":0}]";
+        List<AddClassTeachingTimeParam> addClassTeachingTimeParams = JSONArray.parseArray(jsonStr, AddClassTeachingTimeParam.class);
+        System.out.println(addClassTeachingTimeParams);
+        Date time = Calendar.getInstance().getTime();
+        SimpleDateFormat hourFormat = new SimpleDateFormat("HH");
+        int i = Integer.parseInt(hourFormat.format(time));
+        System.out.println(i);
+        SimpleDateFormat minuteFormat = new SimpleDateFormat("mm");
+        int minute = Integer.parseInt(minuteFormat.format(time));
+        System.out.println(minute);
+        AddClassTeachingTimeParam a = new AddClassTeachingTimeParam();
+        a.setBeginHour(i);
+        a.setBeginMinute(minute);
+        System.out.println(a);
     }
 }
